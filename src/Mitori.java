@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Mitori {
     public static void main(String[] args) {
-        int digits=1,numbers=1;
+        int digits,numbers;
         if(args.length<2){
             System.out.println("引数が足りません。\nmitori int桁数 int問題数 [boolean引き算を含むか]\nの形で入力してください。\n第三引数は省略した場合trueになります。");
             return;
