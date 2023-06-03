@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -30,7 +31,13 @@ public class Mitori {
             System.out.printf("%"+(digits+1)+"d\n",num);
         }
         Scanner sc=new Scanner(System.in);
-        long l=sc.nextLong();
+        long l;
+        try{
+            l=sc.nextLong();
+        }catch (InputMismatchException e){
+            System.out.println("なんじゃそら！");
+            return;
+        }
         System.out.println(l==ans?"正解！":"ざんねん...");
         System.out.printf("答えは %d でした\n",ans);
         sc.close();
