@@ -31,14 +31,14 @@ public class Mitori {
             System.out.printf("%"+(digits+1)+"d\n",num);
         }
         Scanner sc=new Scanner(System.in);
-        long l;
+        long response;
         try{
-            l=sc.nextLong();
+            response=sc.nextLong();
         }catch (InputMismatchException e){
             System.out.println("なんじゃそら！");
             return;
         }
-        System.out.println(l==ans?"正解！":"ざんねん...");
+        System.out.println(response==ans?"正解！":"ざんねん...");
         System.out.printf("答えは %d でした\n",ans);
         sc.close();
     }
